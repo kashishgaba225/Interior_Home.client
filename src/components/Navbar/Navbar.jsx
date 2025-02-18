@@ -22,7 +22,7 @@ export default function Navbar() {
     return (
         <div>
 
-            <nav className='flex justify-between w-full items-center px-4 py-3 bg-purple-900  mg:px-8 lg:16 shadow-lg text-white  '>
+            <nav className='flex justify-between fixed w-full items-center px-4 py-3 bg-purple-900  mg:px-8 lg:16 shadow-lg text-white  '>
 
                 {/* left div */}
                 <div className='flex justify-center items-center space-x-6'>
@@ -61,11 +61,23 @@ export default function Navbar() {
 
                 </div>
 
-                <div className={`absolute top-18 right-0 w-full bg-purple-950 md:hidden ${Bar ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out`}>
+                {/* <div className={`absolute top-18 right-0 w-full bg-purple-950 md:hidden ${Bar ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out`}>
                     <ul className='flex flex-col items-center  space-y-4 p-4'>
                         {Menu.map((item, key) => (
                             <li key={key} className='hover:scale-110 duration-300'>
                                 <Link to={item.href} className='rounded-md text-xl font-semibold px-3 py-2 text-neutral-200 transition-colors hover:bg-purple-500 hover:text-white'>
+                                    {item.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div> */}
+
+                <div className={`absolute top-16 left-0 w-full bg-gray-800 md:hidden transition-all duration-300 ease-in-out ${Bar ? "block" : "hidden"}`}>
+                    <ul className="flex flex-col text-center space-y-4 p-4">
+                        {Menu.map((item, key) => (
+                            <li key={key}>
+                                <Link to={item.href} className="block rounded-md text-xl font-semibold px-3 py-2 text-gray-300 transition-colors hover:bg-gray-700 hover:text-white">
                                     {item.name}
                                 </Link>
                             </li>
