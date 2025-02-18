@@ -107,7 +107,7 @@ export default function SignIn() {
   ];
 
   return (
-    <div className='flex justify-center h-full items-center pb-2 bg-gradient-to-r from-purple-300 to-purple-500 animate-gradient'>
+    <div className='flex justify-center h-screen items-center pb-2 bg-gradient-to-r from-purple-300 to-purple-500 animate-gradient'>
       <form onSubmit={formik.handleSubmit}
         className='flex flex-col gap-2 mt-[20px] bg-white px-12 py-8 rounded-lg shadow-2xl'
         encType="multipart/form-data"
